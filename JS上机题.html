@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script></script>
+	</head>
+	<body>
+		<p><input name="chk"type="checkbox"value="滑雪" />滑雪</p>
+		<p><input name="chk"type="checkbox"value="游泳" />游泳</p>
+		<p><input name="chk"type="checkbox"value="爬山" />爬山</p>
+		<p><input name="btn" type="button" onclick="allChacked()" value="选择"></p>
+		<p><input name="btn" type="button" onclick="cancleChacked()" value="取消"></p>
+		<p><input name="btn" type="button" onclick="fanChacked()" value="反选"></p>
+	</body>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("p").css("border","2px dashed black");
+		})
+		function allChacked(){
+			$("input[type=checkbox]").prop("checked",true);
+		}
+		function cancleChacked(){
+			$("input[type=checkbox]").prop("checked",false);
+		}
+		function fanChacked(){
+			$("input[type=checkbox]").each(function(index,elemet){
+				$(elemet).prop("checked",!$(elemet).prop("checked"))
+			})
+		}
+	</script>
+</html>

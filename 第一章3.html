@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input name="nonel" value="nonel" />
+		<form>
+			<label>姓名：</label>
+			<input name="name" />
+			<label>通讯：</label>
+			<input name="newsletter" />
+		</form>
+		<input class="cls1" name="none2" value="none2"/>
+		<input class="cls1" name="none3" value="none3"/>
+		<input id="none4" class="cls1" name="none4" value="none4"/>
+		<input id="none5" class="none5" value="none5" />
+	</body>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("*").css("background","darkgray");
+			$("form>input").css("background","hotpink");
+			$("form~input").css("background","aqua");
+			$("form+input").css("background","salmon");
+			$("input[class=cls1]").css("background","blue");
+			$("input[id=none5]").css("background","blueviolet");
+			$("body input:first-child").css("background","chartreuse");
+		})
+	</script>
+</html>
